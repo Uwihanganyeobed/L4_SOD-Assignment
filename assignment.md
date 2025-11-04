@@ -1,7 +1,7 @@
-# JavaScript Beginner Assignment
+# DSA_JavaScript Assignment
 
 **Total Questions: 5**  
-**Level: Beginner**
+**Level: 4 SOD**
 
 ---
 
