@@ -1,169 +1,148 @@
-# DSA_JavaScript Assignment
+# DSA JavaScript  Assignment - Basics
 
 **Total Questions: 5**  
-**Level: 4 SOD**
+**Level: 4 SOD**  
+**Topics: Variables, Operators, Conditionals, Loops, Arrays & Objects**
 
 ---
 
-## Question 1: Temperature Converter (Functions & Operators)
+## Question 1: Calculate Shopping Total (Variables & Operators)
 
-Write a function called `convertTemperature` that takes two parameters:
-- `temperature` (number)
-- `unit` (string: either "C" for Celsius or "F" for Fahrenheit)
+Create variables to store the prices of 4 items you bought at a store:
+- `item1` = 15.50
+- `item2` = 23.00
+- `item3` = 8.75
+- `item4` = 12.25
 
-The function should:
-- If unit is "C", convert Celsius to Fahrenheit using the formula: `(C × 9/5) + 32`
-- If unit is "F", convert Fahrenheit to Celsius using the formula: `(F - 32) × 5/9`
-- Return the converted temperature rounded to 2 decimal places
+Calculate and display:
+1. The total price of all items
+2. The average price per item
+3. If you pay with 100, how much change will you get?
 
-**Example:**
+**Expected Output:**
 ```javascript
-console.log(convertTemperature(0, "C"));    // Output: 32
-console.log(convertTemperature(100, "C"));  // Output: 212
-console.log(convertTemperature(32, "F"));   // Output: 0
-console.log(convertTemperature(98.6, "F")); // Output: 37
+Total: 59.5
+Average: 14.875
+Change: 40.5
 ```
 
 ---
 
-## Question 2: Even Number Counter (Loops & Conditionals)
+## Question 2: Age Classifier (Conditionals)
 
-Write a function called `countEvenNumbers` that takes two parameters:
-- `start` (starting number)
-- `end` (ending number)
+Create a variable called `age` and assign it a value.
 
-The function should:
-- Count how many even numbers exist between `start` and `end` (inclusive)
-- Return the count
-- Also print each even number to the console
+Write conditional statements to print the age category:
+- 0-12: "Child"
+- 13-17: "Teenager"
+- 18-59: "Adult"
+- 60 and above: "Senior"
 
-**Example:**
+Test your code with different age values: 10, 16, 25, 65
+
+**Example Output:**
 ```javascript
-console.log(countEvenNumbers(1, 10));  
-// Prints: 2, 4, 6, 8, 10
-// Returns: 5
-
-console.log(countEvenNumbers(5, 15));  
-// Prints: 6, 8, 10, 12, 14
-// Returns: 5
+// For age = 16
+You are a Teenager
 ```
 
 ---
 
-## Question 3: Student Grade Manager (Objects & Arrays)
+## Question 3: Multiplication Table (Loops)
 
-Create a class called `Student` with the following:
+Use a `for` loop to print the multiplication table for the number 7, from 1 to 10.
 
-**Properties:**
-- `name` (string)
-- `grades` (array of numbers)
+**Expected Output:**
+```
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+```
 
-**Methods:**
-- `addGrade(grade)` - Adds a grade to the grades array
-- `getAverage()` - Calculates and returns the average of all grades
-- `getLetterGrade()` - Returns letter grade based on average:
-  - A: 90-100
-  - B: 80-89
-  - C: 70-79
-  - D: 60-69
-  - F: 0-59
+**Bonus Challenge:** Modify your code to skip printing the line when the result is 35 (use `continue`)
 
-**Example:**
+---
+
+## Question 4: Array Operations (Arrays & Loops)
+
+Create an array called `temperatures` with the following values:
 ```javascript
-const student1 = new Student("Alice");
-student1.addGrade(85);
-student1.addGrade(92);
-student1.addGrade(78);
+let temperatures = [23, 28, 19, 31, 25, 22, 30];
+```
 
-console.log(student1.getAverage());      // Output: 85
-console.log(student1.getLetterGrade());  // Output: "B"
+Write code to:
+1. Print all temperatures using a loop
+2. Find and print the highest temperature (use a loop and comparison)
+3. Find and print the lowest temperature (use a loop and comparison)
+4. Count how many days had temperature above 25
+
+**Expected Output:**
+```
+Temperatures: 23, 28, 19, 31, 25, 22, 30
+Highest temperature: 31
+Lowest temperature: 19
+Days above 25: 3
 ```
 
 ---
 
-## Question 4: Shopping Cart (OOP & Methods)
+## Question 5: Student Information (Objects & Conditionals)
 
-Create a class called `ShoppingCart` with the following:
-
-**Properties:**
-- `items` (array to store items)
-- `totalPrice` (number, starts at 0)
-
-**Methods:**
-- `addItem(name, price)` - Adds an item object `{name, price}` to the cart and updates totalPrice
-- `removeItem(name)` - Removes an item by name and updates totalPrice
-- `displayCart()` - Prints all items and the total price
-
-**Example:**
+Create an object called `student` with the following properties:
 ```javascript
-const cart = new ShoppingCart();
-
-cart.addItem("Apple", 1.50);
-cart.addItem("Bread", 2.00);
-cart.addItem("Milk", 3.50);
-
-cart.displayCart();
-// Output:
-// Items in cart:
-// - Apple: $1.50
-// - Bread: $2.00
-// - Milk: $3.50
-// Total: $7.00
-
-cart.removeItem("Bread");
-cart.displayCart();
-// Output:
-// Items in cart:
-// - Apple: $1.50
-// - Milk: $3.50
-// Total: $5.00
+let student = {
+    name: "John",
+    rollNumber: 101,
+    marks: 78,
+    subject: "Mathematics"
+};
 ```
 
----
+Write code to:
+1. Print all student information using `console.log`
+2. Determine and print the grade based on marks:
+   - 90-100: "Excellent"
+   - 75-89: "Very Good"
+   - 60-74: "Good"
+   - 50-59: "Average"
+   - Below 50: "Needs Improvement"
+3. Check if the student passed (marks >= 50) and print "Pass" or "Fail"
 
-## Question 5: Number Pattern Generator (Loops & Logic)
-
-Write a function called `printPattern` that takes one parameter:
-- `rows` (number of rows)
-
-The function should print a number pattern like this:
-
-For `printPattern(5)`:
+**Expected Output:**
 ```
-1
-1 2
-1 2 3
-1 2 3 4
-1 2 3 4 5
+Name: John
+Roll Number: 101
+Marks: 78
+Subject: Mathematics
+Grade: Very Good
+Result: Pass
 ```
-
-For `printPattern(3)`:
-```
-1
-1 2
-1 2 3
-```
-
-**Hint:** Use nested loops - one for rows and one for printing numbers in each row.
 
 ---
 
 ## Submission Guidelines
 
-1. Create a new JavaScript file named `assignment.js`
-2. Write your solutions with clear comments explaining your logic
-3. Test each function with the provided examples and additional test cases
-4. Make sure your code runs without errors
+1. Create a file named `basics_assignment.js`
+2. Write clear comments before each question
+3. Test your code to ensure it runs without errors
+4. Use meaningful variable names
 
-## Grading Criteria
+## Tips for Success
 
-- **Correctness**: Does the code produce the expected output? (50%)
-- **Code Quality**: Is the code clean, well-organized, and readable? (25%)
-- **Comments**: Are there helpful comments explaining the logic? (15%)
-- **Testing**: Did you test with multiple cases? (10%)
+- Remember to use `let` or `const` for variables
+- Use proper indentation for readability
+- Test with different values to ensure your code works correctly
+- Add comments explaining what each section does
 
 ---
 
-**Good luck! 🎯**
+**Good luck! 🌟**
 
-*Remember: If you get stuck, review the concepts in the README file and try breaking the problem into smaller steps.*
+*If you get stuck, review the concepts covered in class and try solving each part step by step.*
